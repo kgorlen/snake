@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="rootPane" focusTraversable="true" onKeyPressed="#handleKeyPressed" onMouseEntered="#handleMouseEntered" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kgorlen.snake.SnakeController">
+   <center>
+      <Canvas fx:id="canvas" height="300.0" width="300.0" BorderPane.alignment="CENTER" />
+   </center>
+   <left>
+      <Rectangle fill="DODGERBLUE" height="300.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="10.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Rectangle fill="DODGERBLUE" height="300.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="10.0" BorderPane.alignment="CENTER" />
+   </right>
+   <top>
+      <Rectangle fill="DODGERBLUE" height="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="320.0" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <StackPane prefHeight="20.0" prefWidth="320.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle fill="DODGERBLUE" height="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="320.0" />
+            <Text fx:id="score" strokeType="OUTSIDE" strokeWidth="0.0" text="Score: 0" textAlignment="CENTER" />
+         </children>
+      </StackPane>
+   </bottom>
+</BorderPane>
