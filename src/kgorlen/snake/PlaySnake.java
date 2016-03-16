@@ -7,17 +7,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 public class PlaySnake extends Application {
-//    public static final double SPEED_MS = 100;
-//	public static final int CELL_SIZE = 10;
-//	public static final int ROWS = 30;
-//	public static final int COLUMNS = 30;
-//	public static final int GRID_WIDTH = COLUMNS * CELL_SIZE;
-//    public static final int GRID_HEIGHT  = ROWS * CELL_SIZE;
-//    public static final int SCORE_HEIGHT = 30;
-//    public static final int BORDERPANE_WIDTH = GRID_WIDTH + 2*CELL_SIZE;
-//    public static final int BORDERPANE_HEIGHT = CELL_SIZE + GRID_HEIGHT + SCORE_HEIGHT;
-//    public static final Point UPPERLEFT = new Point(0,0);
-//    public static final Point LOWERRIGHT = new Point(GRID_WIDTH-1, GRID_HEIGHT-1);		
 
 	public static void main(String[] args) {
 		launch(PlaySnake.class, args);
