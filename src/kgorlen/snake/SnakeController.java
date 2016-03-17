@@ -35,10 +35,10 @@ public class SnakeController {
     private Text score; // Value injected by FXMLLoader
 
     public static final double SPEED_MS = 100;
-	public static int CELL_SIZE;
-	public static int ROWS;
-	public static int COLUMNS;
-	public static Bounds GRID_BOUNDS;
+	public static int CellSize;
+	public static int Rows;
+	public static int Columns;
+	public static Bounds GridBounds;
 
     private Snake snake;
     private Apple apple;
@@ -49,10 +49,10 @@ public class SnakeController {
         assert canvas != null : "fx:id=\"canvas\" was not injected: check your FXML file 'snake.fxml'.";
         assert score != null : "fx:id=\"score\" was not injected: check your FXML file 'snake.fxml'.";
 
-        CELL_SIZE = (int) Math.round(rootPane.getTop().getBoundsInParent().getHeight());
-        GRID_BOUNDS = rootPane.getCenter().getBoundsInParent();
-        ROWS = (int) Math.floor(GRID_BOUNDS.getHeight() / CELL_SIZE);
-        COLUMNS = (int) Math.floor(GRID_BOUNDS.getWidth() / CELL_SIZE);
+        CellSize = (int) Math.round(rootPane.getTop().getBoundsInParent().getHeight());
+        GridBounds = rootPane.getCenter().getBoundsInParent();
+        Rows = (int) Math.floor(GridBounds.getHeight() / CellSize);
+        Columns = (int) Math.floor(GridBounds.getWidth() / CellSize);
         
         GraphicsContext gc = canvas.getGraphicsContext2D();
 	    snake = new Snake(gc);

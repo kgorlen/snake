@@ -17,14 +17,14 @@ public class Apple extends Point {
      * @return random cell X coordinate
      */
     private final int randX() {
-    	return r.nextInt(SnakeController.COLUMNS) * SnakeController.CELL_SIZE;
+    	return r.nextInt(SnakeController.Columns) * SnakeController.CellSize;
     }
 
     /**
      * @return random cell Y coordinate
      */
     private final int randY() {
-    	return r.nextInt(SnakeController.ROWS) * SnakeController.CELL_SIZE;
+    	return r.nextInt(SnakeController.Rows) * SnakeController.CellSize;
     }
     
     /**
@@ -37,7 +37,7 @@ public class Apple extends Point {
         } while (snake.contains(this));
 
         gc.setFill(Color.RED);
-        gc.fillOval(getX(), getY(), SnakeController.CELL_SIZE, SnakeController.CELL_SIZE);
+        gc.fillOval(getX(), getY(), SnakeController.CellSize, SnakeController.CellSize);
     }
 
 }

@@ -17,12 +17,12 @@ public class Snake extends LinkedList<Point> {
     
     public void reset(){
     	gc.clearRect(0, 0,
-    			SnakeController.GRID_BOUNDS.getWidth(),
-    			SnakeController.GRID_BOUNDS.getHeight());
+    			SnakeController.GridBounds.getWidth(),
+    			SnakeController.GridBounds.getHeight());
     	clear();
 	    direction = Direction.UP;
-	    addFirst(new Point(SnakeController.COLUMNS/2 * SnakeController.CELL_SIZE,
-      		  SnakeController.ROWS/2 * SnakeController.CELL_SIZE));
+	    addFirst(new Point(SnakeController.Columns/2 * SnakeController.CellSize,
+      		  SnakeController.Rows/2 * SnakeController.CellSize));
 	    addHead();
 	    addHead();
         return;
@@ -35,7 +35,7 @@ public class Snake extends LinkedList<Point> {
     public boolean addHead(){
     	Point head = new Point(getFirst());
     	head.translate(direction.x(), direction.y());
-        if (!head.inBounds(SnakeController.GRID_BOUNDS) || contains(head)) {
+        if (!head.inBounds(SnakeController.GridBounds) || contains(head)) {
         	reset();
         	return false;
         }
@@ -44,7 +44,7 @@ public class Snake extends LinkedList<Point> {
 // Draw the head       
         gc.setFill(Color.GREEN);
         gc.fillOval(head.getX(), head.getY(),
-        		SnakeController.CELL_SIZE, SnakeController.CELL_SIZE);
+        		SnakeController.CellSize, SnakeController.CellSize);
         return true;
     }
 
@@ -61,7 +61,7 @@ public class Snake extends LinkedList<Point> {
 
 // clearRect() of entire cell overlaps cell above and cell left???
      	gc.clearRect(tail.getX()+1, tail.getY()+1,
-     			SnakeController.CELL_SIZE-1, SnakeController.CELL_SIZE-1);
+     			SnakeController.CellSize-1, SnakeController.CellSize-1);
         return false;
     }
     

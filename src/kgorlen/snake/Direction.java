@@ -1,10 +1,10 @@
 package kgorlen.snake;
 
 public enum Direction {
-	LEFT 	(-SnakeController.CELL_SIZE, 0),
-	RIGHT 	(+SnakeController.CELL_SIZE, 0),
-	UP 		(0, -SnakeController.CELL_SIZE),
-	DOWN 	(0, +SnakeController.CELL_SIZE);
+	LEFT 	(-SnakeController.CellSize, 0),
+	RIGHT 	(+SnakeController.CellSize, 0),
+	UP 		(0, -SnakeController.CellSize),
+	DOWN 	(0, +SnakeController.CellSize);
 	
 	private final int x,y;
 	Direction(int x, int y) {
